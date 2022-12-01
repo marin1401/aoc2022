@@ -7,10 +7,10 @@ all_calories = [line.strip() for line in input_lines]
 
 calories_per_elf = [0]
 for calorie in all_calories:
-    if not calorie:
-        calories_per_elf.append(0)
-    else:
+    if calorie:
         calories_per_elf[-1] += int(calorie)
+    else:
+        calories_per_elf.append(0)
 
 #Part 1
 
