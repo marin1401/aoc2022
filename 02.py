@@ -1,4 +1,4 @@
-#Day 01
+#Day 02
 
 with open('./02.txt') as my_input:
     input_lines = my_input.readlines()
