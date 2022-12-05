@@ -10,12 +10,15 @@ def priority(a_list):
 
 #Part 1
 
-common_chars = [next(iter(set(line[:len(line)//2]) & set(line[len(line)//2:]))) for line in input_lines]
+common_chars = [next(iter(set(line[:len(line)//2]) & set(line[len(line)//2:])))
+                for line in input_lines]
 
 print(priority(common_chars))
 
 #Part 2
 
-badges = [next(iter(set(line_1) & set(line_2) & set(line_3))) for line_1, line_2, line_3 in zip(input_lines[::3], input_lines[1::3], input_lines[2::3])]
+badges = [next(iter(set(line_1) & set(line_2) & set(line_3)))
+          for line_1, line_2, line_3 in
+          zip(input_lines[::3], input_lines[1::3], input_lines[2::3])]
 
 print(priority(badges))
