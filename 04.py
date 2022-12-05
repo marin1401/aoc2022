@@ -7,7 +7,7 @@ pairs = [line.strip().split(',') for line in input_lines]
 
 full_overlap, any_overlap = 0, 0
 for pair in pairs:
-    ranges = [set(range(limit[0], limit[1]+1)) for limit in (list(map(int, elf.split('-'))) for elf in pair)]
+    ranges = [set(range(limit_1, limit_2+1)) for limit_1, limit_2 in (map(int, elf.split('-')) for elf in pair)]
     overlap = ranges[0] & ranges[1]
     if overlap in ranges:
         full_overlap += 1
